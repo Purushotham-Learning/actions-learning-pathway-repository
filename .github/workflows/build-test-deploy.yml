@@ -26,6 +26,8 @@ jobs:
           node-version: '18.x'
       - name: Install NPM
         run: npm install
+      - name: Run ESLint
+        run: npm next lint
       - name: Test NPM
         run: npm test
   
