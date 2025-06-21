@@ -1,0 +1,17 @@
+name: hello-world
+on: push
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: use node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: Install NPM
+        run: npm install
+      - name: npm run build
+        run: npm run build
+  
